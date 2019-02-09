@@ -60,8 +60,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.core_ctl_min_cpu=2 \
     ro.vendor.qti.core_ctl_max_cpu=4 \
-    vendor.iop.enable_prefetch_ofr=0 \
-    vendor.iop.enable_uxe=0
 
 # RCS and IMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -104,3 +102,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.perf.iop_v3.enable=1 \
     ro.vendor.at_library=libqti-at.so \
     persist.vendor.qti.games.gt.prof=1
+
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-filter=speed \
+    ro.vendor.qti.am.reschedule_service=true \
+    ro.sys.fw.dex2oat_thread_count=8 \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=8
+
