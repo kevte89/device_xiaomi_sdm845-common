@@ -117,8 +117,11 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/dev/input/event2"
 
+# Compile libhwui in performance mode
+HWUI_COMPILE_FOR_PERF := true
+
 # QCOM
-#BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
@@ -132,7 +135,7 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-TARGET_RIL_VARIANT := caf
+#TARGET_RIL_VARIANT := caf
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
@@ -147,3 +150,5 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/sdm845-common/BoardConfigVendor.mk
+
+
