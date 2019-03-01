@@ -114,9 +114,6 @@ TARGET_USES_MKE2FS := true
 
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Power
-TARGET_TAP_TO_WAKE_NODE := "/dev/input/event2"
-
 # Compile libhwui in performance mode
 HWUI_COMPILE_FOR_PERF := true
 
